@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart To-Do App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 🏠 FRONT PAGE -->
+<div id="homePage" class="home">
+  <h1>✨ Smart To-Do App</h1>
+  <p>Manage your tasks efficiently with style 🚀</p>
+  <button onclick="startApp()">Start Managing</button>
+</div>
+
+<!-- 📋 MAIN APP -->
+<div id="appPage" class="container" style="display:none;">
+
+  <h1>📋 My Tasks</h1>
+
+  <!-- Search -->
+  <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchTask()">
+
+  <!-- Inputs -->
+  <input type="text" id="taskInput" placeholder="Enter task">
+  <input type="datetime-local" id="taskDate">
+
+  <select id="priority">
+    <option value="low">Low Priority</option>
+    <option value="medium">Medium Priority</option>
+    <option value="high">High Priority</option>
+  </select>
+
+  <select id="status">
+    <option value="Pending">Pending</option>
+    <option value="In Progress">In Progress</option>
+    <option value="Completed">Completed</option>
+  </select>
+
+  <input type="file" id="taskImage" accept="image/*">
+
+  <button onclick="addTask()">Add Task</button>
+
+  <ul id="taskList"></ul>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
